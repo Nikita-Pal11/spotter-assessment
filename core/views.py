@@ -13,7 +13,7 @@ class Route(APIView):
 
         if not start or not finish:
             return Response(
-                {"error": "Please provide both 'start' and 'finish' query parameters. Example: /api/route/?start=New York, NY&finish=Los Angeles, CA"},
+                {"error": "Please provide both 'start' and 'finish' locations."},
                 status=status.HTTP_400_BAD_REQUEST
             )
 

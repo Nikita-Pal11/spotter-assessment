@@ -77,7 +77,7 @@ def optimize_fuel_stops(route_info):
 
     route_stops.sort(key=lambda x: x["mile_marker"])
 
-
+# fuel refueling optimization
     total_gallons_needed = total_distance / MPG
     chosen_stops = []
     curr_pos = 0.0
