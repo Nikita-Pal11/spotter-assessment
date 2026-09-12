@@ -67,7 +67,6 @@ class Route(APIView):
             "total_fuel_gallons": fuel_result["total_fuel_gallons"],
             "total_fuel_cost_usd": fuel_result["total_fuel_cost_usd"],
             "fuel_stops": fuel_result["fuel_stops"],
-            "route_geometry": route_data["geojson"]
         }
 
         return Response(response_payload, status=status.HTTP_200_OK)

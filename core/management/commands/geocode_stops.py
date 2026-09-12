@@ -1,10 +1,11 @@
 
+import os
 import time
 import requests
 from django.core.management.base import BaseCommand
 from core.models import FuelStop
 
-GEOAPIFY_KEY = "a0121d6c1eb34c91bc42b8698129a390"
+GEOAPIFY_KEY = os.getenv("GEOAPIFY_KEY", "a0121d6c1eb34c91bc42b8698129a390")
 
 class Command(BaseCommand):
     help = "Geocode fuel stations missing lat/lng"

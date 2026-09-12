@@ -1,6 +1,7 @@
+import os
 import requests
 
-GEOAPIFY_KEY="a0121d6c1eb34c91bc42b8698129a390"
+GEOAPIFY_KEY = os.getenv("GEOAPIFY_KEY", "a0121d6c1eb34c91bc42b8698129a390")
 def routeApi(latS,lngS,latF,lngF):
     url = f"https://api.geoapify.com/v1/routing?waypoints={latS},{lngS}|{latF},{lngF}&mode=medium_truck&apiKey={GEOAPIFY_KEY}"
 
